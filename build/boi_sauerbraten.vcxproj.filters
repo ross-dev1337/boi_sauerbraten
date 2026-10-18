@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\CMakeFiles\boi_sauerbraten.dir\cmake_pch.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\dll_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\hooks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\menu_interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\imgui\imgui_demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\imgui\imgui_impl_opengl2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\imgui\imgui_impl_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\minhook\buffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\minhook\hde\hde32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\minhook\hde\hde64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\minhook\hook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\minhook\trampoline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\CMakeFiles\boi_sauerbraten.dir\Debug\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\CMakeFiles\boi_sauerbraten.dir\Release\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\CMakeFiles\boi_sauerbraten.dir\MinSizeRel\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\CMakeFiles\boi_sauerbraten.dir\RelWithDebInfo\cmake_pch.hxx">
+      <Filter>Precompile Header File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Precompile Header File">
+      <UniqueIdentifier>{CF3FE02B-8C0F-3DD0-8DDB-D5C1E803561F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BF515057-3E64-360D-8C5D-BF196AC2F8B5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

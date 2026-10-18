@@ -1,0 +1,86 @@
+#include "dll_main.h"
+ 
+void functions::rebase() {
+    const auto module = GetModuleHandle(nullptr);
+
+    if (module == nullptr) {
+        globals::game_base = 0;
+        return;
+    }
+
+    const auto base = reinterpret_cast<uint64_t>(module);
+    globals::game_base = base; // 7ff77fa20000
+    
+  
+    globals::game_vars::player_count = reinterpret_cast<uint64_t*>(base + 0x346C9C);
+   // globals::game_vars::trace_line = base + 0x109010;
+ 
+    structs::screen = reinterpret_cast<structs::screen_dimensions*>(base + 0x2A3534);
+   // structs::matrix = reinterpret_cast<structs::view_matrix*>(base + 0x17DFD0);
+    update_pointers();
+}
+
+// the game can reallocate these at runtime (map change, players joining), so re-read them every frame
+void functions::update_pointers() {
+    const auto base = globals::game_base;
+    if (base == 0)
+        return;
+
+    structs::local_player = *reinterpret_cast<structs::player**>(base + 0x2A5730);
+    // structs::ent = *reinterpret_cast<structs::entity**>(base + 0x18AC04);
+}
+
+/*
+bool functions::client::is_me(structs::player* client) {
+    return client == structs::local_player;
+}
+
+bool functions::client::is_friend(structs::player* client) {
+    return client->team == structs::local_player->team;
+}
+
+bool functions::client::is_alive(structs::player* client) {
+    return client->alive == 0x1; 
+}
+
+bool functions::client::world_to_screen(const math::vec3& world, math::vec3& screen) {
+    const auto& matrix = structs::matrix->view;
+
+    const float clip_x = world.x * matrix[0] + world.y * matrix[4] + world.z * matrix[8] + matrix[12];
+
+    const float clip_y = world.x * matrix[1] + world.y * matrix[5] + world.z * matrix[9] + matrix[13];
+
+    const float clip_w = world.x * matrix[3] + world.y * matrix[7] + world.z * matrix[11] + matrix[15];
+
+    if (clip_w <= 0.1f)
+        return false;
+
+    const float inv_w = 1.0f / clip_w;
+
+    const float ndc_x = clip_x * inv_w;
+    const float ndc_y = clip_y * inv_w;
+
+    const float half_width = structs::screen->screen_width * 0.5f;
+    const float half_height = structs::screen->screen_height * 0.5f;
+
+    screen.x = half_width + ndc_x * half_width;
+    screen.y = half_height - ndc_y * half_height;
+
+    return true;
+}
+*/ 
+
+const char* functions::va(const char* str, ...) {
+    thread_local std::array<char, 512> buffer{};
+
+    va_list args;
+    va_start(args, str);
+    ::vsnprintf(buffer.data(), buffer.size(), str, args);
+    va_end(args);
+
+    return buffer.data();
+}
+
+uint32_t functions::sdl::set_relative_mouse_mode(uint32_t mode) {
+    return call<uint32_t>(globals::mouse_move, mode);
+}

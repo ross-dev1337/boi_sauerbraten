@@ -1,0 +1,8 @@
+================================================================================
+Linker Errors
+Generated: 2026-10-18T21:04:24.849Z
+Total Errors: 1
+================================================================================
+
+[LNK1104] (MSVC)
+cannot open file 'C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\bin\Release\boi_sauerbraten.dll' [C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.vcxproj]

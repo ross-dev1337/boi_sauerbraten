@@ -1,0 +1,10 @@
+^C:\DEVELOPMENT\CHEATS\PC\LEARN GAME HACKING\CUBE_NEW\BOI_SAUERBRATEN\BUILD\CMAKEFILES\49436C6B9846AEF5C1DA5F19D7D91EFF\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Development/cheats/PC/Learn Game Hacking/cube_new/boi_sauerbraten" "-BC:/Development/cheats/PC/Learn Game Hacking/cube_new/boi_sauerbraten/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Development/cheats/PC/Learn Game Hacking/cube_new/boi_sauerbraten/build/boi_sauerbraten.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
