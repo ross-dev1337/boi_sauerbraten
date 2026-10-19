@@ -84,10 +84,21 @@ namespace structs {
      }; 
      inline player* local_player; 
 
+	 // <sauerbraten.exe>+0x346C90
+	 struct entity {
+		player* entites[32];
+	 };
+	 inline entity* ent; 
+
 
      struct screen_dimensions {
         uint32_t height; 
         uint32_t width; 
      }; 
      inline screen_dimensions* screen; 
+
+	 struct view_matrix {
+		math::matrix4x4 view; 
+	 }; 
+	 inline view_matrix* matrix; 
 };
