@@ -24,4 +24,5 @@
 #include "engine/globals.h"
 #include "engine/functions.h"
 #include "engine/menu_interface.h"
+#include "engine/visuals.h"
 #include "engine/hooks.h"
