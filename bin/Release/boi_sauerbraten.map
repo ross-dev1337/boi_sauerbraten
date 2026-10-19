@@ -1,6 +1,6 @@
  boi_sauerbraten
 
- Timestamp is 6ad54151 (Sun Oct 18 22:59:45 2026)
+ Timestamp is 6ad6a7b1 (Tue Oct 20 00:28:49 2026)
 
  Preferred load address is 0000000180000000
 
@@ -701,13 +701,13 @@
  0002:00004d3c       __real@3f2b851f            0000000180038d3c     imgui.obj
  0002:00004d40       __real@3f333333            0000000180038d40     imgui.obj
  0002:00004d44       __real@3f3851ec            0000000180038d44     imgui.obj
- 0002:00004d48       __real@3f400000            0000000180038d48     imgui.obj
+ 0002:00004d48       __real@3f400000            0000000180038d48     imgui_draw.obj
  0002:00004d4c       __real@3f490fdb            0000000180038d4c     imgui.obj
  0002:00004d50       __real@3f4ccccd            0000000180038d50     imgui.obj
  0002:00004d54       __real@3f5db22d            0000000180038d54     imgui_draw.obj
  0002:00004d58       __real@3f733333            0000000180038d58     imgui.obj
  0002:00004d5c       __real@3f7d70a4            0000000180038d5c     imgui_draw.obj
- 0002:00004d60       __real@3f800000            0000000180038d60     hooks.obj
+ 0002:00004d60       __real@3f800000            0000000180038d60     imgui_widgets.obj
  0002:00004d64       __real@3f99999a            0000000180038d64     imgui_widgets.obj
  0002:00004d68       __real@3fa00000            0000000180038d68     imgui.obj
  0002:00004d6c       __real@3faccccd            0000000180038d6c     imgui.obj
@@ -720,7 +720,7 @@
  0002:00004d94       __real@40490fdb            0000000180038d94     imgui_draw.obj
  0002:00004d98       __real@40666666            0000000180038d98     imgui_widgets.obj
  0002:00004d9c       __real@40800000            0000000180038d9c     imgui.obj
- 0002:00004da0       __real@40a00000            0000000180038da0     imgui.obj
+ 0002:00004da0       __real@40a00000            0000000180038da0     imgui_draw.obj
  0002:00004da4       __real@40c00000            0000000180038da4     imgui_widgets.obj
  0002:00004da8       __real@40c90fdb            0000000180038da8     imgui_draw.obj
  0002:00004dac       __real@41000000            0000000180038dac     imgui.obj
@@ -741,7 +741,7 @@
  0002:00004de8       __real@44b33333            0000000180038de8     imgui_draw.obj
  0002:00004dec       __real@45333333            0000000180038dec     imgui_draw.obj
  0002:00004df0       __real@46c2ac00            0000000180038df0     imgui_impl_win32.obj
- 0002:00004df4       __real@7f7fffff            0000000180038df4     hooks.obj
+ 0002:00004df4       __real@7f7fffff            0000000180038df4     imgui_widgets.obj
  0002:00004df8       __real@bf400000            0000000180038df8     imgui_draw.obj
  0002:00004dfc       __real@bf5db22d            0000000180038dfc     imgui_draw.obj
  0002:00004e00       __real@bf800000            0000000180038e00     imgui_demo.obj
