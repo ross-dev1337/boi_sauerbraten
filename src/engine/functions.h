@@ -6,9 +6,9 @@ namespace functions {
     const char* va(const char* str, ...);
 
     namespace client {
-       /// bool is_me(structs::player* client);
-     //   bool is_friend(structs::player* client);
-      //  bool is_alive(structs::player* client);
+        bool is_me(structs::player* client);
+        bool is_friend(structs::player* client);
+        bool is_alive(structs::player* client);
         bool world_to_screen(const math::vec3& world, math::vec3& screen);
     }
 

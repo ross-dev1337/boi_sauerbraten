@@ -9,10 +9,9 @@ void functions::rebase() {
     }
 
     const auto base = reinterpret_cast<uint64_t>(module);
-    globals::game_base = base; // 7ff77fa20000
+    globals::game_base = base;
     
-  
-    globals::game_vars::player_count = reinterpret_cast<uint64_t*>(base + 0x346C9C);
+    globals::game_vars::player_count = *reinterpret_cast<uint32_t*>(base + 0x346C9C);
    // globals::game_vars::trace_line = base + 0x109010;
  
     structs::screen = reinterpret_cast<structs::screen_dimensions*>(base + 0x2A3534);
@@ -27,20 +26,21 @@ void functions::update_pointers() {
         return;
 
     structs::local_player = *reinterpret_cast<structs::player**>(base + 0x2A5730);
-    // structs::ent = *reinterpret_cast<structs::entity**>(base + 0x18AC04);
+    structs::ent = *reinterpret_cast<structs::entity**>(base + 0x346C90);
 }
 
-/*
+
 bool functions::client::is_me(structs::player* client) {
     return client == structs::local_player;
 }
 
 bool functions::client::is_friend(structs::player* client) {
-    return client->team == structs::local_player->team;
+    return strcmp(client->team, structs::local_player->team);
 }
 
 bool functions::client::is_alive(structs::player* client) {
-    return client->alive == 0x1; 
+   // return client->alive == 0x1; 
+   return true; 
 }
 
 bool functions::client::world_to_screen(const math::vec3& world, math::vec3& screen) {
@@ -60,15 +60,15 @@ bool functions::client::world_to_screen(const math::vec3& world, math::vec3& scr
     const float ndc_x = clip_x * inv_w;
     const float ndc_y = clip_y * inv_w;
 
-    const float half_width = structs::screen->screen_width * 0.5f;
-    const float half_height = structs::screen->screen_height * 0.5f;
+    const float half_width = structs::screen->width * 0.5f;
+    const float half_height = structs::screen->height * 0.5f;
 
     screen.x = half_width + ndc_x * half_width;
     screen.y = half_height - ndc_y * half_height;
 
     return true;
 }
-*/ 
+
 
 const char* functions::va(const char* str, ...) {
     thread_local std::array<char, 512> buffer{};
