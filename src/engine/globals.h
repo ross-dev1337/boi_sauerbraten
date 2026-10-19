@@ -67,7 +67,7 @@ namespace globals {
     }
 
     namespace game_vars {
-        inline uint64_t* player_count = nullptr;
+        inline uint32_t player_count = 0;
         inline uint64_t trace_line = 0; 
     }
 
