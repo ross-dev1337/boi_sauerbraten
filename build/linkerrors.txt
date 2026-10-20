@@ -1,8 +1,11 @@
 ================================================================================
 Linker Errors
-Generated: 2026-10-18T21:04:24.849Z
-Total Errors: 1
+Generated: 2026-10-20T20:28:23.798Z
+Total Errors: 2
 ================================================================================
 
-[LNK1104] (MSVC)
-cannot open file 'C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\bin\Release\boi_sauerbraten.dll' [C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.vcxproj]
+[LNK2001] (MSVC)
+unresolved external symbol "bool __cdecl aimbot::is_visible(struct structs::player *,struct math::vec3 const &,struct math::vec3 const &)" (?is_visible@aimbot@@YA_NPEAUplayer@structs@@AEBUvec3@math@@1@Z) [C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.vcxproj]
+
+[LNK1120] (MSVC)
+1 unresolved externals [C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.vcxproj]

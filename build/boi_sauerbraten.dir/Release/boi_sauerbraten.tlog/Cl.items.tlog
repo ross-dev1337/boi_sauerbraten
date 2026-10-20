@@ -1,8 +1,10 @@
 C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\CMakeFiles\boi_sauerbraten.dir\cmake_pch.cxx;C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.dir\Release\cmake_pch.obj
 C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\dll_main.cpp;C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.dir\Release\dll_main.obj
+C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\aimbot.cpp;C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.dir\Release\aimbot.obj
 C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\functions.cpp;C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.dir\Release\functions.obj
 C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\hooks.cpp;C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.dir\Release\hooks.obj
 C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\menu_interface.cpp;C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.dir\Release\menu_interface.obj
+C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\visuals.cpp;C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.dir\Release\visuals.obj
 C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\imgui\imgui.cpp;C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.dir\Release\imgui.obj
 C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\imgui\imgui_demo.cpp;C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.dir\Release\imgui_demo.obj
 C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\imgui\imgui_draw.cpp;C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\build\boi_sauerbraten.dir\Release\imgui_draw.obj

@@ -7,6 +7,9 @@
     <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\dll_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\aimbot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -14,6 +17,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\menu_interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\engine\visuals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Development\cheats\PC\Learn Game Hacking\cube_new\boi_sauerbraten\src\imgui\imgui.cpp">

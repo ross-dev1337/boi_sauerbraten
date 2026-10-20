@@ -58,7 +58,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "boi_sauerbraten::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-boi_sauerbraten-Debug-2b3394dea789fadf028c.json",
+					"jsonFile" : "target-boi_sauerbraten-Debug-7b14a98128078a48b9bc.json",
 					"name" : "boi_sauerbraten",
 					"projectIndex" : 0
 				}
@@ -121,7 +121,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "boi_sauerbraten::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-boi_sauerbraten-Release-7afcd83bbfbb2826b8f3.json",
+					"jsonFile" : "target-boi_sauerbraten-Release-b8dc422b5251c08d4cdb.json",
 					"name" : "boi_sauerbraten",
 					"projectIndex" : 0
 				}
@@ -184,7 +184,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "boi_sauerbraten::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-boi_sauerbraten-MinSizeRel-735919bbc41fafb4bf21.json",
+					"jsonFile" : "target-boi_sauerbraten-MinSizeRel-95478ddbeca810e077c9.json",
 					"name" : "boi_sauerbraten",
 					"projectIndex" : 0
 				}
@@ -247,7 +247,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "boi_sauerbraten::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-boi_sauerbraten-RelWithDebInfo-301bbe864a1823b13c40.json",
+					"jsonFile" : "target-boi_sauerbraten-RelWithDebInfo-ac8fbbde5370641b4d21.json",
 					"name" : "boi_sauerbraten",
 					"projectIndex" : 0
 				}
