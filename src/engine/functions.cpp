@@ -10,12 +10,13 @@ void functions::rebase() {
 
     const auto base = reinterpret_cast<uint64_t>(module);
     globals::game_base = base;
+   // printf("%llx\n", globals::game_base); // 7ff726f50000
     
-    globals::game_vars::player_count = *reinterpret_cast<uint32_t*>(base + 0x346C9C);
-   // globals::game_vars::trace_line = base + 0x109010;
+    
+    globals::game_vars::ray_cube = base + 0x1142C0;
  
     structs::screen = reinterpret_cast<structs::screen_dimensions*>(base + 0x2A3534);
-   // structs::matrix = reinterpret_cast<structs::view_matrix*>(base + 0x17DFD0);
+    structs::matrix = reinterpret_cast<structs::view_matrix*>(base + 0x32D040);
     update_pointers();
 }
 
@@ -27,6 +28,7 @@ void functions::update_pointers() {
 
     structs::local_player = *reinterpret_cast<structs::player**>(base + 0x2A5730);
     structs::ent = *reinterpret_cast<structs::entity**>(base + 0x346C90);
+    globals::game_vars::player_count = *reinterpret_cast<uint32_t*>(base + 0x346C9C);
 }
 
 
@@ -35,12 +37,11 @@ bool functions::client::is_me(structs::player* client) {
 }
 
 bool functions::client::is_friend(structs::player* client) {
-    return strcmp(client->team, structs::local_player->team);
+    return client->team[0] != '\0' && !strcmp(client->team, structs::local_player->team);
 }
 
 bool functions::client::is_alive(structs::player* client) {
-   // return client->alive == 0x1; 
-   return true; 
+    return client->state == 0;  
 }
 
 bool functions::client::world_to_screen(const math::vec3& world, math::vec3& screen) {
@@ -69,6 +70,24 @@ bool functions::client::world_to_screen(const math::vec3& world, math::vec3& scr
     return true;
 }
 
+bool functions::client::is_visible(const math::vec3& start, const math::vec3& end) {
+    const math::vec3 delta = end - start;
+    const float dist = ::sqrtf(delta.dot(delta)); 
+
+    if(dist <= 0.f)
+        return true; 
+
+    const math::vec3 dirction = delta * (1.f / dist); // raycube wants a normalized direction, not an end point
+    constexpr uint32_t ray_clipmat_alphapoly = 16 | 7; // same mode shoot() uses
+
+    const float barrier = engine::ray_cube(&start, &dirction, dist, ray_clipmat_alphapoly, 0, nullptr);
+
+    return !(barrier > 0.f && barrier < dist - .1f); 
+}
+
+float functions::engine::ray_cube(const math::vec3* from , const math::vec3* ray, float max_dist, uint32_t mode, uint32_t size, void* ent) {
+    return call<float>(globals::game_vars::ray_cube, from, ray, max_dist, mode, size, ent); 
+}
 
 const char* functions::va(const char* str, ...) {
     thread_local std::array<char, 512> buffer{};

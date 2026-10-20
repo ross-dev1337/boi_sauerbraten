@@ -10,6 +10,11 @@ namespace functions {
         bool is_friend(structs::player* client);
         bool is_alive(structs::player* client);
         bool world_to_screen(const math::vec3& world, math::vec3& screen);
+        bool is_visible(const math::vec3& start, const math::vec3& end); 
+    }
+
+    namespace engine {
+        float ray_cube(const math::vec3* from , const math::vec3* ray, float max_dist, uint32_t mode, uint32_t size, void* ent);
     }
 
     namespace sdl {
