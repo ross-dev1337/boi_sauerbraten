@@ -37,7 +37,7 @@ void menu_interface::draw_ui() {
         ImGui::Text("Visual Options");
         ImGui::Separator();
         ImGui::Checkbox("Draw SnapLines", &globals::menu_options::visuals::snaplines);
-        ImGui::SliderInt("SnapLine Posision", &globals::menu_options::visuals::snap_pos, 0, 1337);
+        ImGui::SliderInt("SnapLine Posision", &globals::menu_options::visuals::snap_pos, 0, structs::screen->height);
         menu_interface::handle_combo_box_options();
         ImGui::Checkbox("Draw Names", &globals::menu_options::visuals::name);
         ImGui::Checkbox("Draw Distance", &globals::menu_options::visuals::dist);
