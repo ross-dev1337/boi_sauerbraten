@@ -33,4 +33,5 @@ This project is intended for educational purposes and experimentation in control
 Use it responsibly and respect the game's terms of service, server rules, and other players. Do not use this project to disrupt multiplayer games or gain an unfair advantage over other players.
 
 ## 📸 Screenshots
-<img width="1862" height="994" alt="image" src="https://github.com/user-attachments/assets/04c3e36c-ef85-42a8-887b-5a19a97a79c1" /> 
+<img width="1271" height="1436" alt="image" src="https://github.com/user-attachments/assets/f68ba331-1eca-4b25-809d-a0c2546c45c6" />
+
