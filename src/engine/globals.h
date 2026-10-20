@@ -68,7 +68,7 @@ namespace globals {
 
     namespace game_vars {
         inline uint32_t player_count = 0;
-        inline uint64_t trace_line = 0; 
+        inline uintptr_t ray_cube = 0; 
     }
 
     namespace colors {
