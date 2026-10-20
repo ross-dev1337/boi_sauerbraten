@@ -179,20 +179,32 @@ void visuals::opengl::draw_visuals() {
         if (enemy == nullptr)
             continue;
 
-        if (functions::client::is_me(enemy) || functions::client::is_alive(enemy))
+        if (functions::client::is_me(enemy) || !functions::client::is_alive(enemy))
             continue;
 
-        const auto color = functions::client::is_friend(enemy) ? globals::colors::imgui::green : globals::colors::imgui::red;
+        const math::vec3 head_world(enemy->origin1.x, enemy->origin1.y, enemy->origin1.z + enemy->above_eye);
+        const math::vec3 feet_world(enemy->origin1.x, enemy->origin1.y, enemy->origin1.z - enemy->eye_height);
+
+        const bool is_visible = functions::client::is_visible(structs::local_player->origin1, enemy->origin1); 
+        const bool is_target = enemy == aimbot::current_target; 
+
+        ImVec4 color{};
+        if(functions::client::is_friend(enemy))
+            color = globals::colors::imgui::green;
+        else if(is_target) 
+            color = globals::colors::imgui::light_blue;
+        else 
+            color = is_visible ? globals::colors::imgui::yellow : globals::colors::imgui::red;
 
         math::vec3 head_screen, feet_screen;
-        if (!functions::client::world_to_screen(enemy->origin1, head_screen))
+        if (!functions::client::world_to_screen(head_world, head_screen))
+             continue;
+
+        if (!functions::client::world_to_screen(feet_world, feet_screen))
             continue;
 
-        if (!functions::client::world_to_screen(enemy->origin2, feet_screen))
-            continue;
-
-        const auto width = fabs((head_screen.y - feet_screen.y) / 2.f);
-        const auto height = width * 2.f;
+        const auto height = fabs(feet_screen.y - head_screen.y);
+        const auto width = height / 2.f;
 
         if (snaplines)
             opengl::draw_line(center_x, globals::menu_options::visuals::snap_pos, feet_screen.x, feet_screen.y, color, 1);
@@ -208,7 +220,7 @@ void visuals::opengl::draw_visuals() {
             opengl::corner_bounding(head_screen.x, head_screen.y, width, height, color, 1);
             break;
         case globals::menu_options::visuals::box_type::three_d:
-            opengl::draw_3d_box(enemy->origin2, 1, 5, color);
+            opengl::draw_3d_box(feet_world, enemy->radius, enemy->eye_height + enemy->above_eye, color);
             break;
         }
 
@@ -219,7 +231,7 @@ void visuals::opengl::draw_visuals() {
             opengl::draw_text_shader(functions::va(" [ %.2fm ] ", structs::local_player->origin1.distance(enemy->origin1) / 100.f), head_screen.x, head_screen.y - 41.5f, globals::colors::imgui::white, globals::colors::imgui::blue, globals::align::x_center);
 
         if (health_bar)
-            opengl::draw_health_bar(head_screen, feet_screen, enemy->current_health, 100);
+            opengl::draw_health_bar(head_screen, feet_screen, enemy->current_health, enemy->max_health);
             
     }
     opengl::draw_crosshair(1, globals::colors::imgui::blue);

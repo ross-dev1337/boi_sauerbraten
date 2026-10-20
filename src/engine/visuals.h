@@ -6,9 +6,7 @@ namespace visuals {
         void draw_string(const char* string, float x, float y, ImVec4 color);
         void draw_text_shader(const char* string, float x, float y, ImVec4 color, ImVec4 color2, globals::align op);
         void draw_line(float x, float y, float x2, float y2, ImVec4 color, float thickness);
-        void draw_esp_line(math::vec3 center, float x1, float y1, float z1, float x2, float y2, float z2, ImVec4 color);
-        void draw_esp_line(math::vec3 center, float x1, float y1, float z1, float x2, float y2, float z2, ImVec4 color);
-        void draw_3d_box(math::vec3 Center, float w, float h, ImVec4 Color);
+        void draw_esp_line(math::vec3 center, float x1, float y1, float z1, float x2, float y2, float z2, ImVec4 color);        void draw_3d_box(math::vec3 Center, float w, float h, ImVec4 Color);
         void corner_bounding(float x, float y, float w, float h, ImVec4 color, float thickness);
         void two_d_bounding(float x, float y, float w, float h, ImVec4 color, float thickness);
         void two_d_bounding_with_shader(float x, float y, float w, float h, ImVec4 color, float thickness);
