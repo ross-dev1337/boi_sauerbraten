@@ -73,7 +73,14 @@ namespace structs {
 	    char _0x000C[0x24]; //0x000C
 	    math::vec3 origin2; //0x0030
 	    math::vec3 view_angles; //0x003C
-	    char _0x0048[0x130]; //0x0048
+	    char _0x0048[0x8]; //0x0048
+		float eye_height; // 0x0050
+		float above_eye; // 0x0054
+		float radius; // 0x0058 x radius
+		float y_radius; // 0x005C
+		char _0x0060[0x17]; //0x0060
+		uint8_t state; // 0x0077
+		char _0x0078[0x100];
 	    uint32_t current_health; //0x0178
 	    uint32_t max_health; //0x017C
 	    uint32_t armor; //0x0180
